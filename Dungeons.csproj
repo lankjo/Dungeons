@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Classes\ClassesLibrary.csproj" />
   </ItemGroup>
 
 </Project>
