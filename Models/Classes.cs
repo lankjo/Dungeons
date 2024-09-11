@@ -1,7 +1,7 @@
 ﻿namespace Dungeons.Models
 {
     using System;
-    
+    //Using interface to gurantee properties exist
     public interface ICharacter
     {
         //properties
