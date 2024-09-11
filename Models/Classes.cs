@@ -1,10 +1,28 @@
 ﻿namespace Dungeons.Models
 {
     using System;
-    //trying to add to git
-    public class Character
+    
+    public interface ICharacter
     {
         //properties
+        public string Name { get; set; }
+        public int MaxHitPoints { get; set; }
+        public int HitPoints { get; set; }
+        public int Strength { get; set; }
+        public int Intelligence { get; set; }
+        public int Wisdom { get; set; }
+        public int Dexterity { get; set; }
+        public int Constitution { get; set; }
+        public string Weapon { get; set; }
+        public int Attack { get; set; }
+        public string[] Inventory { get; set; }
+        public string Race { get; set; }
+        public string CharacterClass { get; set; }
+    }
+
+    public class Player : ICharacter
+    {
+        //Player properties
         public string Name { get; set; }
         public int MaxHitPoints { get; set; }
         public int HitPoints { get; set; }
@@ -22,7 +40,7 @@
         public int Level { get; set; } = 1;
 
         //Constructor
-        public Character(string name, int maxhitpoints, int strength, int intelligence, int wisdom, int dexterity, int constitution, string weapon, string race, string characterclass)
+        public Player(string name, int maxhitpoints, int strength, int intelligence, int wisdom, int dexterity, int constitution, string weapon, string race, string characterclass)
         {
             Name = name;
             MaxHitPoints = maxhitpoints;
@@ -68,8 +86,8 @@
             Console.WriteLine($"{Name} has healed some, Hit Points are {HitPoints}.");
         }
 
-        //Print Character Method
-        public void PrintChar()
+        //Print Player Method
+        public void PrintPlayer()
         {
             Console.WriteLine($"Character {Name} stats:");
             Console.WriteLine($"Name: {Name}");
